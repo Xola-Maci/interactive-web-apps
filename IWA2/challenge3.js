@@ -5,10 +5,10 @@ It is important to show the following message in order to:
 - to impress investors
 */
 
- const warning = 'Security scan starting'
+ const warning = "Security scan starting"
 console.warn(warning)
 
 // It is important to let user know when they can close the page 
-
- const inform = 'Please wait for scan to complete before closing the browser'
+ 
+ const inform = "Please wait for scan to complete before closing the browser"
 console.info(inform)
