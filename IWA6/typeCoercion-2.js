@@ -8,14 +8,11 @@ const minuteOfDay = 0;
 
 // Only change below this line
 
-if (hourOfDay && (minuteOfDay !== null) && (hourOfDay == '00') && (minuteOfDay == '00')) {
+if (hourOfDay && minuteOfDay !== null && hourOfDay == '00' && minuteOfDay == '00') {
 	const taxAsDecimal = tax / '100';
   const startingAfterTax = salary * '1' - taxAsDecimal;
  const balance = startingAfterTax - transport - food - rent;
+ 
 }
 
- function balanceFix(x){
-    return balance.parseInt(balance).toFixed(3)
- }
-
-console.log(balance);
+console.log(balance.toFixed(2));
