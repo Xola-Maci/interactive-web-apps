@@ -9,7 +9,9 @@ const minuteOfDay = 00;
 // Only change below this line
  
 
-if (hourOfDay == 00 && minuteOfDay == 00) {
+if (
+  hourOfDay != undefined && minuteOfDay != undefined &&
+  hourOfDay === 00 && minuteOfDay === 00) {
  const taxAsDecimal = parseFloat(tax)/ 100; // converts tax into tax decimal value
  const startingAfterTax = salary * (1 - taxAsDecimal); // enclosed 1 - taxAsDecimal with () to fix the calculatio
  const balance = startingAfterTax - transport - food - rent;
