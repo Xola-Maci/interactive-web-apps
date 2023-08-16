@@ -18,10 +18,10 @@ const leo = {
 	balance: leoBalance,
 	accessId: '47afb389-8014-4d0b-aff3-e40203d2107f',
 	age: 24,
-	address:{
+	'address':{
 		number: leoNumber,
 		street: leoStreet,
-		postalCode: leoPostal,
+		'postalCode': leoPostal,
 	}
 }
 
@@ -30,12 +30,12 @@ const sarah = {
 	age: 62,
 	accessId: '6b279ae5-5657-4240-80e9-23f6b635f7a8',
 	balance: sarahBalance,
-	address: {
+	'address': {
 		number: sarahNumber,
 		street: sarahStreet,
-		postalCode: sarahPostal,
+		'postalCode': sarahPostal,
 	}
 }   
 
-console.log(leo, leo.address.postalCode)
-console.log(sarah, sarah.address.postalCode)
+console.log(leo, leo['address']['postalCode'])
+console.log(sarah, sarah['address']['postalCode'])
