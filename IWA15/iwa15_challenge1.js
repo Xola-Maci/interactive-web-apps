@@ -22,19 +22,18 @@ const extractBiggest = () => {
 
 	if (firstItem >= secondItem && firstItem >= thirdItem) {
 
-        data.lists[0][1].pop() // will remove the last value of the first array
-		return firstItem
+       const lastValue1= data.lists[0][1].pop() // will remove the last value of the first array
+		return lastValue1
 
 	}else if (secondItem >= firstItem && secondItem >= thirdItem) {
 
-        data.lists[1][1].pop() // will remove the last value of the second array
-		return secondItem
+        const lastValue2 = data.lists[1][1].pop() // will remove the last value of the second array
+		return lastValue2
 
 	}else{
 
-    data.lists[2][1].pop() // will remove the last value of the third array
-	return thirdItem
-
+    const lastValue3=data.lists[2][1].pop() // will remove the last value of the third array
+	return lastValue3
     }
 }
 
