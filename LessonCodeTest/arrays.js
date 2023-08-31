@@ -80,7 +80,7 @@ const board = [
 
 // object example
 
-const starting = [
+/**const starting = [
     ['a', true]
     ['b', 1000]
     ['e','Hello World!']
@@ -90,7 +90,10 @@ const examp = Object.fromEntries(starting);
 const examp1 = Object.keys(examp)
 const examp2 = Object.values(examp)
 
-console.log(examp1, examp2)
+console.log(examp1, examp2)*/
 
 // DESTRUCTURING
 
+const fruits = [];
+fruits.push("banana", "apple", "peach");
+console.log(fruits.length);
