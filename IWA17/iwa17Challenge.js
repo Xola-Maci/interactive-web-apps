@@ -76,23 +76,24 @@ const createHtml = (data) => {
     for (const { week, days } of data) {
       let inner = '';
   
-      inner += addCell('', 'table__cell table__cell_sidebar', `Week ${week}`);
+      inner = addCell(inner, 'table__cell table__cell_sidebar', `Week ${week}`);
   
       for (const { dayOfWeek, value } of days) {
-        const isToday = new Date().getDate() === value;
+        const isToday = new Date().getDate() === value; // checks if velaue is equal to current date
         const isWeekend = dayOfWeek === 0 || dayOfWeek === 6; // Sunday (0) and Saturday (6).
-        const isAlternate = week % 2 === 0;
+        const isAlternate = week % 2 === 0; // checks wether the current week number is even
   
         let classString = 'table__cell';
+        
+        if (isToday) classString = `${classString}table__cell_today`;
+        if (isWeekend) classString = `${classString} table__cell_weekend`;
+        if (isAlternate) classString =  `${classString}table__cell_alternate`;
   
-        if (isToday) classString += ' table__cell_today';
-        if (isWeekend) classString += ' table__cell_weekend';
-        if (isAlternate) classString += ' table__cell_alternate';
-  
-        inner += addCell('', classString, value);
+        inner = addCell('', classString, value);
       }
   
-      result += `<tr>${inner}</tr>`;
+      result = `${result}
+            <tr>${inner}</tr>`;
     }
   
     return result;
