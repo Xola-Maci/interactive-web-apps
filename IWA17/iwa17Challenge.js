@@ -28,10 +28,10 @@ const createArray = (length) => {
 }
 
 const createData = () => {
-    const current = new Date();
+    const current = new Date();// object is for current date and time
     current.setDate(1); // Set the date to the first day of the month.
   
-    const startDay = current.getDay(); // 0 for Sunday, 1 for Monday, etc.
+    const startDay = current.getDay(); // Finds the day of the week
     const daysInMonth = getDaysInMonth(current);
   
     const weeks = createArray(5); // Assuming there are at most 5 weeks in a month.
@@ -57,13 +57,17 @@ const createData = () => {
     return result;
   };
 
+  /**existing is for the existing html content.
+   *  ClassString creates a table with a CSS class called 'classString'
+   * (&nbsp;${value}&nbsp;) places the value inside the table cell, makes spcace around the value.
+  */
 const addCell = (existing, classString, value) => {
-    return `
-      ${existing}
+    const result =`${existing}
       <td class="${classString}">
         &nbsp;${value}&nbsp;
       </td>
     `;
+    return result;
   };
 
 const createHtml = (data) => {
