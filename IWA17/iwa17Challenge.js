@@ -31,7 +31,7 @@ const createData = () => {
     const current = new Date();// object is for current date and time
     current.setDate(1); // Set the date to the first day of the month.
   
-    const startDay = current.getDay(); // Finds the day of the week
+    const startDay = current.getDay(); // Finds the day of the
     const daysInMonth = getDaysInMonth(current);
   
     const weeks = createArray(5); // Assuming there are at most 5 weeks in a month.
@@ -76,24 +76,23 @@ const createHtml = (data) => {
     for (const { week, days } of data) {
       let inner = '';
   
-      inner = addCell(inner, 'table__cell table__cell_sidebar', `Week ${week}`);
+      inner += addCell('', 'table__cell table__cell_sidebar', `Week ${week}`);
   
       for (const { dayOfWeek, value } of days) {
-        const isToday = new Date().getDate() === value; // checks if velaue is equal to current date
+        const isToday = new Date().getDate() === value;
         const isWeekend = dayOfWeek === 0 || dayOfWeek === 6; // Sunday (0) and Saturday (6).
-        const isAlternate = week % 2 === 0; // checks wether the current week number is even
+        const isAlternate = week % 2 === 0;
   
         let classString = 'table__cell';
-        
-        if (isToday) classString = `${classString}table__cell_today`;
-        if (isWeekend) classString = `${classString} table__cell_weekend`;
-        if (isAlternate) classString =  `${classString}table__cell_alternate`;
   
-        inner = addCell('', classString, value);
+        if (isToday) classString += ' table__cell_today';
+        if (isWeekend) classString += ' table__cell_weekend';
+        if (isAlternate) classString += ' table__cell_alternate';
+  
+        inner += addCell('', classString, value);
       }
   
-      result = `${result}
-            <tr>${inner}</tr>`;
+      result += `<tr>${inner}</tr>`;
     }
   
     return result;
