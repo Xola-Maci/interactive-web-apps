@@ -67,7 +67,7 @@ const handleHelpToggle = (event) => {
  * 
  * @param {Event} event 
  */
-const handleAddToggle = (event) => {
+const handleAddToggle = (event) => { // activate the add order button
     const isAddOpen = html.add.overlay;
     if (isAddOpen.open) {
         isAddOpen.open = false;
