@@ -16,7 +16,7 @@ const sarahPostal = '0310'
 
 /**
  * An Object with personal details of a user
- * @type {object} 
+ * @typedef {object} 
  */
 const leo = {
 	name: `${leoName}`,
