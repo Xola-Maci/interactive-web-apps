@@ -1,3 +1,4 @@
+// @ts-check
 const leoName = 'Leo Musvaire'
 const leoNumber = '2'
 const leoStreet = 'Church St.'
@@ -13,6 +14,10 @@ const sarahPostal = '0310'
 
 // Only change below this line
 
+/**
+ * An Object with personal details of a user
+ * @type {object} 
+ */
 const leo = {
 	name: `${leoName}`,
 	balance: leoBalance,

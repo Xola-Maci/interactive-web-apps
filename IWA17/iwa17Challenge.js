@@ -60,7 +60,10 @@ const createData = () => {
   /**existing is for the existing html content.
    *  ClassString creates a table with a CSS class called 'classString'
    * (&nbsp;${value}&nbsp;) places the value inside the table cell, makes spcace around the value.
-   * @param{string} existing
+   * @param {string} existing - This is for the existing HTML content
+   * @param {string} classString - creates a table with a CSS class called 'classString'
+   * @param {string} value - This is the value that will added to the cell table
+   * @returns {result} - This returns results as a string
   */
 const addCell = (existing, classString, value) => {
     const result =`${existing}
